@@ -1,0 +1,202 @@
+/* Base Container */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+  background: url("/images/home_bg_new.png") no-repeat center center/cover;
+  color: white;
+  padding: 20px;
+  position: relative;
+}
+
+/* Main Heading */
+.mainHeading {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Subheading */
+.subHeading {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Left Section */
+.leftSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  gap: 12px;
+  min-width: 300px;
+}
+
+/* Optimized Box Sizes */
+.videoBox,
+.textBox,
+.audioBox,
+.rulesBox,
+.smallVideoBox {
+  width: 90%;
+  max-width: 400px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Optimized Text Box to Fit Audio */
+.textBox {
+  width: 95%;
+  max-width: 430px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 12px;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Middle Section */
+.middleSection {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  min-width: 400px;
+}
+
+.poster {
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+}
+
+/* Right Section */
+.rightSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  gap: 12px;
+  min-width: 300px;
+}
+
+/* Responsive Design */
+
+/* Laptops & Tablets */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .mainHeading {
+    font-size: 26px;
+    top: 5px;
+  }
+
+  .subHeading {
+    font-size: 20px;
+    top: 40px;
+  }
+
+  .leftSection,
+  .middleSection,
+  .rightSection {
+    flex: none;
+    width: 100%;
+    min-width: unset;
+  }
+
+  .poster {
+    max-width: 90%;
+  }
+
+  .textBox,
+  .rulesBox {
+    font-size: 13px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .mainHeading {
+    font-size: 24px;
+  }
+
+  .subHeading {
+    font-size: 18px;
+  }
+
+  .videoBox,
+  .textBox,
+  .audioBox,
+  .rulesBox,
+  .smallVideoBox {
+    width: 95%;
+    max-width: 350px;
+    padding: 10px;
+  }
+
+  .poster {
+    max-width: 100%;
+  }
+
+  .textBox,
+  .rulesBox {
+    font-size: 12px;
+  }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+  .mainHeading {
+    font-size: 20px;
+  }
+
+  .subHeading {
+    font-size: 16px;
+  }
+
+  .textBox,
+  .rulesBox {
+    font-size: 11px;
+  }
+
+  .poster {
+    max-width: 100%;
+  }
+
+  .videoBox,
+  .smallVideoBox {
+    max-width: 300px;
+  }
+}

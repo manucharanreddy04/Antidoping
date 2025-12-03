@@ -1,0 +1,140 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/images/learning_bg.jpg") no-repeat center center/cover;
+  padding: 20px;
+}
+
+.formBox {
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: 600;
+  color: #262626;
+  margin-bottom: 24px;
+  text-align: center;
+  position: relative;
+}
+
+.heading:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: #1890ff;
+  border-radius: 2px;
+}
+
+.error {
+  color: #f5222d;
+  margin-bottom: 16px;
+  padding: 8px 12px;
+  background-color: #fff1f0;
+  border-radius: 4px;
+  border: 1px solid #ffa39e;
+}
+
+.input,
+.select {
+  margin-bottom: 16px;
+}
+
+.input :global(.ant-input),
+.input :global(.ant-input-number),
+.select :global(.ant-select-selector) {
+  border-radius: 6px;
+  padding: 10px;
+  height: auto;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+}
+
+.input :global(.ant-input:focus),
+.input :global(.ant-input-number:focus),
+.select :global(.ant-select-selector:focus) {
+  border-color: #1890ff;
+  box-shadow: none;
+}
+
+.input :global(.ant-input-number) input {
+  appearance: textfield;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  -ms-appearance: textfield;
+}
+
+.input :global(.ant-input-number) input::-webkit-inner-spin-button,
+.input :global(.ant-input-number) input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.select {
+  width: 100%;
+}
+
+.accessButton {
+  width: 100%;
+  height: 46px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #1890ff, #096dd9);
+  margin-top: 8px;
+  box-shadow: 0 4px 10px rgba(24, 144, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.accessButton:hover {
+  background: linear-gradient(90deg, #096dd9, #0050b3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(24, 144, 255, 0.4);
+}
+
+.accessButton:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .formBox {
+    padding: 30px 20px;
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+
+  .accessButton {
+    height: 40px;
+  }
+}
