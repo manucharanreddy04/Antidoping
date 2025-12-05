@@ -107,6 +107,6 @@ Athletes using this app will learn:
  This project is intended for educational and academic use.
 
 
- Manu Charan Reddy
- 
-🔗 GitHub: manucharanreddy04 💼 LinkedIn: https://www.linkedin.com/in/manucharanreddy-kandimalla-64b473373/
+Manu Charan Reddy
+
+🔗 GitHub: https://github.com/manucharanreddy04 💼 LinkedIn: https://www.linkedin.com/in/manucharanreddy-kandimalla-64b473373/
